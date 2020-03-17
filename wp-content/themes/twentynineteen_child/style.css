@@ -1,0 +1,15 @@
+/*
+Theme Name: Twenty Nineteen Child
+Theme URL: http://wpamanuke.com/
+Description: Twenty Seventeen Child Theme
+Author: WPAmaNuke
+Author URL: http://wpamanuke.com/
+Template: twentynineteen
+Version: 1.0.0
+Text Domain: twentynineteen-child
+*/
+/* Custom CSS goes after this line */
+
+.entry .entry-title a {
+  color: #ff0000;
+}

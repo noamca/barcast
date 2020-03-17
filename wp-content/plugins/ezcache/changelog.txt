@@ -1,0 +1,60 @@
+= 1.3.8 =
+- FIX: WebP convertion did not detect images with non unicode URLs
+- FIX: Whitelist Knockout.js HTML comments
+- ADD: Option to not remove HTML comments when minifing
+- ADD: Option to disable caching by cookie
+
+= 1.3.7 =
+- FIX: CLI requests getting cached
+- FIX: Fail to minify protocol relative URLs
+
+= 1.3.6 =
+- FIX: Error saving settings with Simple permalinks setting
+- FIX: WebP conversion may cuase blank cache file
+
+= 1.3.5 =
+- FIX: Sometimes plugin saves empty cached file
+- ADD: Do not serve cached data for files not using WordPress' theme
+- ADD: Allow to disable gzip compression via a wp-config define: `define( 'EZCACHE_DISABLE_GZIP', false );`
+
+= 1.3.4 =
+- FIX: Store only gzipped cache data to save on disk space
+- FIX: External images processed as internal
+
+= 1.3.3 =
+- FIX: Error preventing media file deletion
+
+= 1.3.2 =
+- FIX: Error preventing saving in plugin/theme editor
+
+= 1.3.1 =
+- FIX: Translations
+
+= 1.3 =
+- FIX: Possible error when installing over older version
+- FIX: Hebrew URL Rejection
+- ADD: Google Font optimization
+- ADD: Disable Emoji
+- ADD: Auto detection for Woocommerce cart and checkout pages
+
+= 1.2.4 =
+- FIX: Error when installing with another caching plugin
+- FIX: Better WordPress compatibility
+- FIX: Rest API support for older server software not supporting HTTP methods other than GET/POST
+
+= 1.2.3 =
+- FIX: WebP saved broken images
+- FIX: Admin visual bugs
+- FIX: Admin quality of life improvements
+
+= 1.2.1 =
+- FIX: Fatal error on admin
+
+= 1.2 =
+- FIX: LTR/RTL visual bug
+
+= 1.1 =
+- bug fixes
+
+= 1.0 =
+- initial release

@@ -1,0 +1,460 @@
+@import "grid";
+@import "utilities";
+@import "forms";
+@import "animations";
+
+[hidden] {
+  display: none !important;
+}
+.font-weight-normal {
+  font-weight: normal !important;
+}
+body.rtl .ezcache-options .ltr {
+  direction: ltr;
+}
+.text-left {
+  text-align: right !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+.ezcache-options {
+  margin-top: 0;
+  position: relative;
+  overflow: hidden;
+}
+.ezcache-main {
+  margin-top: -40px;
+  padding: 40px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.ezcache-options, .ezcache-options *, .ezcache-options *::before, .ezcache-options *::after {
+  box-sizing: border-box;
+}
+.ezcache-options label {
+  font-weight: bold;
+}
+
+.ezcache-options svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.ezcache-options .badge {
+  display: inline-block;
+  border-radius: 1em;
+  background-color: #4095ff;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.1em 0.75em;
+  margin: 0 8px;
+  font-size: 0.8em;
+}
+.ezcache-options .badge.badge-warning {
+  color: #3e2f00;
+  background-color: #ffe79d;
+}
+
+.ezcache-options .notice {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.ezcache-options .wpb-button {
+  border: 1px solid #FDC310;
+  color: #3e2f00;
+  background-color: #FDC310;
+  border-radius: 4px;
+  padding: 6px 12px;
+  transition: all .2s;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+
+  &.wpb-button-sm {
+    padding: 4px 6px;
+    font-size: 0.85em;
+  }
+
+  &.wpb-button-lg {
+    padding: 12px 24px;
+    font-size: 1.2em;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: transparent;
+    background-color: darken(#FDC310, 5%);
+    color: #3e2f00;
+  }
+  &:active {
+    border-color: transparent;
+    background-color: darken(#FDC310, 15%);
+    color: #3e2f00;
+  }
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus,
+  &[disabled]:active {
+    border: transparent;
+    background-color: lighten(#FDC310, 25%);
+    color: #3e2f00;
+    cursor: default;
+  }
+
+  &.wpb-button-outlined {
+    border: 1px solid #FDC310;
+    color: darken(#FDC310,30%);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: #FDC310;
+      color: #3e2f00;
+    }
+  }
+
+  &.wpb-button-primary {
+    border: 1px solid #1A70A6;
+    color: #fff;
+    background-color: #1A70A6;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: lighten(#1A70A6, 10%);
+      color: #fff;
+    }
+    &:active {
+      border-color: transparent;
+      background-color: darken(#1A70A6, 10%);
+      color: #fff;
+    }
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled]:active {
+      border: transparent;
+      background-color: lighten(#1A70A6, 25%);
+      color: #fff;
+    }
+    &.wpb-button-outlined {
+      border: 1px solid #1A70A6;
+      color: #1A70A6;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        background-color: #1A70A6;
+        color: #fff;
+      }
+    }
+  }
+
+  &.wpb-button-danger {
+    border: 1px solid #C4243A;
+    color: #fff;
+    background-color: #C4243A;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: lighten(#C4243A, 10%);
+      color: #fff;
+    }
+    &:active {
+      border-color: transparent;
+      background-color: darken(#C4243A, 10%);
+      color: #fff;
+    }
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled]:active {
+      border: transparent;
+      background-color: lighten(#C4243A, 25%);
+      color: #fff;
+    }
+  }
+}
+
+.ezcache-options .widget {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  height: 100%;
+}
+.ezcache-options .widget-content {
+  border-top: none;
+  padding: 10px 20px;
+  height: 100%;
+}
+.ezcache-options .widget-top {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: auto !important;
+}
+.ezcache-options .widget.open .widget-inside {
+  display: block;
+  border-radius: 4px;
+  box-shadow: none;
+  height: 100%;
+}
+.ezcache-options .widget-title h3 {
+  user-select: auto !important;
+  padding: 10px 5px;
+}
+
+.ezcache-header {
+  z-index: 20;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    color: #516071;
+    font-size: 2em;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: auto;
+    height: 3em;
+    margin: 0 8px;
+    fill: #000;
+
+    .cl-1 { fill: #516071 }
+    .cl-2 { fill: #FDC311 }
+    .cl-3 { fill: #F27522 }
+    .cl-4 { fill: #EC1F25 }
+    .cl-5 { fill: #EA028C }
+    .cl-6 { fill: #662D91 }
+    .cl-7 { fill: #0055A5 }
+    .cl-8 { fill: #4DA8B4 }
+
+    .st0{fill:#1a1a1a}.st1,.st2,.st3,.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#1a1a1a}.st2,.st3,.st7{fill:#fff}.st3,.st7{fill:#f47521}.st7{fill:#bcbec0}.st9{fill:#5686c5}
+  }
+}
+
+
+.ezcache-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 2px;
+
+  .nav-item {
+    width: 100%;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #796464;
+    padding: 8px 16px;
+    margin: 2px -16px;
+    border-radius: 1em;
+    transition: all .2s;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .nav-item:focus, .nav-item:hover, .nav-item-active {
+    color: #231F20;
+  }
+  .nav-item-active {
+    background: #E6E6E6;
+    position: relative;
+
+    &:after {
+      font-family: 'dashicons';
+      content: '';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #F47520;
+      color: #fff;
+      border-radius: 50%;
+      width: calc(1em + 9px);
+      height: calc(1em + 9px);
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      padding-left: 2px;
+
+      body.rtl & {
+        padding-left: 0;
+        padding-right: 2px;
+        content: '';
+        right: unset;
+        left: 4px;
+      }
+    }
+  }
+}
+
+.ezcache-options .side-links {
+  text-align: center;
+
+  .side-links-item {
+    margin: 0.5em 0;
+    display: block;
+  }
+}
+
+
+.ezcache-screen-header {
+  //background: #E6E6E6;
+  //color: #202529;
+  border-radius: 4px;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 30px;
+  background: #E5E5E5;
+  color: #202528;
+  font-weight: bold;
+
+  svg {
+    margin: 0 16px;
+    width: 3em;
+    height: 3em;
+    transform: translateY(-.75em);
+    //fill: #fff;
+    //filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.04));
+    fill: #fff;
+  }
+}
+
+
+.ezcache-options .stats-block {
+  padding: 0.75em 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  .stats-block-icon {
+    width: auto;
+    height: 8em;
+    fill: #7C7C7C;
+    margin-right: 20px;
+
+    body.rtl & {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+
+  .stats-block-title {
+    font-size: 1.5em;
+    color: #7C7C7C;
+    padding: 0;
+    margin: 0;
+  }
+  .stats-block-size {
+    color: #5586C5;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    unicode-bidi: isolate;
+    font-weight: bold;
+
+    body.rtl & {
+      text-align: right;
+    }
+  }
+  .stats-block-description {
+    color: #949393;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.ezcache-setting-inner {
+  border-left: 4px solid #eee;
+}
+body.rtl .ezcache-setting-inner {
+  border-left: none;
+  border-right: 4px solid #eee;
+}
+
+
+#swal2-content {
+  margin-left: 0.5em;
+  margin-right: 1em;
+}
+
+.swal2-popup.swal2-toast {
+  margin: 0.3em;
+}
+
+.ezcache-options .widget .widget-content {
+  position: relative;
+}
+.ezcache-options .widget .widget-loading-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(white, 0.6);
+  }
+}
+
+.ezcache-options .submit {
+  text-align: center;
+}
+
+.ezcache-options--preload {
+  letter-spacing: -1px;
+  font-family: monospace;
+
+  button {
+    letter-spacing: inherit;
+  }
+
+  .ezcache-nav .nav-item {
+    color: #dccbcb;
+  }
+
+  .ezcache-screen-header {
+    color: #c5b9b9;
+  }
+
+  .wpb-button, .wpb-button.wpb-button-outlined {
+    color: #d4c594;
+  }
+
+  .side-links-item {
+    color: #a7ccde;
+  }
+}
